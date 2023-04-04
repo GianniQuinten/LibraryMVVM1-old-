@@ -7,6 +7,9 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-
+        <TextBox HorizontalAlignment="Center" Margin="0,110,0,0" TextWrapping="Wrap" Text="Email" VerticalAlignment="Top" Width="320" TextChanged="TextBox_TextChanged" Height="45" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+        <TextBox HorizontalAlignment="Center" Margin="0,170,0,0" TextWrapping="Wrap" Text="Wachtwoord" VerticalAlignment="Top" Width="320" TextChanged="TextBox_TextChanged" Height="45" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+        <Button Content="Login" HorizontalAlignment="Center" Height="40" Margin="0,250,0,0" VerticalAlignment="Top" Width="150"/>
+        <Button Content="Register" HorizontalAlignment="Center" Height="40" Margin="0,300,0,0" VerticalAlignment="Top" Width="150"/>
     </Grid>
 </Window>
