@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Library.Models
 {
-    internal class Category
+    public class Category
     {
+        public int Id { get; set; }
+
+        public string Name { get; set; }
+
     }
 }

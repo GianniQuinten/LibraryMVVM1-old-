@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace Library.Models
 {
-    internal class Item
+    public class Item
     {
+        public int Id { get; set; }
+
+        // column for category id
+
+        // column or reference many to many genre
+
+        public string Name { get; set; }
     }
 }

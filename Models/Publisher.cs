@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Library.Models
 {
-    internal class Publisher
+    public class Publisher
     {
+        public int Id { get; set; }
+
+        public string Name { get; set; }
+
     }
 }
