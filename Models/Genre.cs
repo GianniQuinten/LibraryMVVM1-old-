@@ -12,5 +12,7 @@ namespace Library.Models
 
         public string Name { get; set; }
 
+        public ICollection<ItemGenre> ItemGenres { get; set; }
+
     }
 }

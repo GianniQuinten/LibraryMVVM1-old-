@@ -12,5 +12,7 @@ namespace Library.Models
 
         public string Name { get; set; }
 
+        public ICollection<ItemPublisher> ItemPublishers { get; set; }
+
     }
 }
