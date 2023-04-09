@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Library.Models
 {
-    class ItemAuthor
+    public class ItemAuthor
     {
         public int AuthorId { get; set; }
         public Author Author { get; set; }
