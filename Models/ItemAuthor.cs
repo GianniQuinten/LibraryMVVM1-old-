@@ -8,6 +8,8 @@ namespace Library.Models
 {
     public class ItemAuthor
     {
+        public int Id { get; set; }
+
         public int AuthorId { get; set; }
         public Author Author { get; set; }
 
