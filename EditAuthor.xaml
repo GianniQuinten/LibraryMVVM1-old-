@@ -7,6 +7,22 @@
         mc:Ignorable="d"
         Title="EditAuthor" Height="450" Width="800">
     <Grid>
-        
+        <Label Content="Naam" Margin="323,47,427,357" RenderTransformOrigin="1.54,0.7"/>
+
+        <Label Content="Achternaam" Margin="292,78,423,324" RenderTransformOrigin="0.236,0.313">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="0.263"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="0.967"/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <TextBox HorizontalAlignment="Left" Margin="382,52,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" RenderTransformOrigin="-0.067,-1.724"/>
+        <TextBox HorizontalAlignment="Left" Margin="382,85,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChanged"/>
+        <Button Content="Voeg toe " HorizontalAlignment="Left" Margin="358,122,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.151,0.453" Click="Button_Click"/>
+        <Label Content="Bewerk een auteur" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Width="204" FontSize="20"/>
+
     </Grid>
 </Window>
