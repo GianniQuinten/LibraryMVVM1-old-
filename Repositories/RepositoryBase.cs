@@ -13,7 +13,7 @@ namespace Library.Repositories
 
         public RepositoryBase()
         {
-            _connectionString = "Server=(local); Database=MVVMLoginDb; Integrated Security=true";
+            _connectionString = "Data Source=(localdb)\\MSSQLLocalDB; Initial Catalog=Library;";
         }
         protected SqlConnection GetConnection()
         {
