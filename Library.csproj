@@ -9,6 +9,19 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+	  <None Remove="Images\bibliotheek.jpg" />
+	  <None Remove="Images\icon-email.png" />
+	  <None Remove="Images\icon-password.png" />
+	  <None Remove="Images\Logo.jpg" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Resource Include="Images\icon-email.png" />
+	  <Resource Include="Images\icon-password.png" />
+	  <Resource Include="Images\Logo.jpg" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.1.0" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.4" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.4">
@@ -29,6 +42,10 @@
 
 	<ItemGroup>
 		<Page Include="App.xaml" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Resource Include="Images\bibliotheek.jpg" />
 	</ItemGroup>
 
 </Project>
