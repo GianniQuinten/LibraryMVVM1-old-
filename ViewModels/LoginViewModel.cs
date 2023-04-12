@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Library.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -6,6 +7,9 @@ using System.Security;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using Library.Repositories;
+using System.Threading;
+using System.Security.Principal;
 
 namespace Library.ViewModels
 {
@@ -17,6 +21,7 @@ namespace Library.ViewModels
         private string _errorMessage;
         private bool _isViewVisible=true;
 
+        private IUserRepository userRepository;
         public string Email { 
             get => _email;
             set
@@ -59,6 +64,7 @@ namespace Library.ViewModels
         // Constructor
         public LoginViewModel()
         {
+            userRepository = new UserRepository();
             LoginCommand = new ViewModelCommand(ExecuteLoginCommand, CanExecuteLoginCommand);
             RecoverPasswordCommand = new ViewModelCommand(p => ExecuteRecoverPassCommand("",""));
         }
@@ -74,8 +80,18 @@ namespace Library.ViewModels
         }
 
         private void ExecuteLoginCommand(object obj)
-        { 
-            throw new NotImplementedException(); 
+        {
+            var isValisUser = userRepository.AuthenticateUser(new System.Net.NetworkCredential(Email, Password));
+            if (isValisUser)
+            {
+                Thread.CurrentPrincipal = new GenericPrincipal(
+                    new GenericIdentity(Email), null);
+                IsViewVisible = false;
+            }
+            else
+            {
+                ErrorMessage = "* Invalid email or password";
+            }
         }
 
         private void ExecuteRecoverPassCommand(string name, string email)

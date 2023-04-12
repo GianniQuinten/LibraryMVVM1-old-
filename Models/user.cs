@@ -10,11 +10,11 @@ namespace Library.Models
     {
         public int Id { get; set; }
 
-        public string Name { get; set; }
+        public string? Name { get; set; }
 
         public string Middlename { get; set; } = null!;
 
-        public string Lastname { get; set; } 
+        public string? Lastname { get; set; } 
         
         public string Adress { get; set; } = null!;
 
@@ -25,6 +25,8 @@ namespace Library.Models
         public string Postalcode { get; set; } = null!;
 
         public string Email { get; set; } = null!;
+
+        public string? Password { get; set; }
 
     }
 
