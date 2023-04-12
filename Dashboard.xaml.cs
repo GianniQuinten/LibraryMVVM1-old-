@@ -24,7 +24,7 @@ namespace Library
             InitializeComponent();
         }
 
-        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        private void MenuItem_Authors(object sender, RoutedEventArgs e)
         {
             
         }
@@ -39,12 +39,22 @@ namespace Library
             Application.Current.Shutdown();
         }
 
-        private void MenuItem_Click_1(object sender, RoutedEventArgs e)
+        private void MenuItem_Categories(object sender, RoutedEventArgs e)
         {
 
         }
 
-        private void MenuItem_Click_2(object sender, RoutedEventArgs e)
+        private void MenuItem_Genres(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void MenuItem_Items(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void MenuItem_Publishers(object sender, RoutedEventArgs e)
         {
 
         }
