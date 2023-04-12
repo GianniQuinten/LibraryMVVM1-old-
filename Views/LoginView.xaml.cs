@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace Library.Views
 {
     /// <summary>
-    /// Interaction logic for RegisterWindow.xaml
+    /// Interaction logic for LoginView.xaml
     /// </summary>
-    public partial class RegisterWindow : Window
+    public partial class LoginView : Window
     {
-        public RegisterWindow()
+        public LoginView()
         {
             InitializeComponent();
         }
