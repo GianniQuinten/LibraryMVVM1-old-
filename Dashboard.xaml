@@ -21,18 +21,17 @@
         </Grid.ColumnDefinitions>
         <Menu Margin="0,0,0,163" Grid.ColumnSpan="3" Grid.RowSpan="1" Background="#FFBD9595">
             <MenuItem Header="_Items" Click="MenuItem_Click">
-                <MenuItem Header="_AddItem"/>
-                <MenuItem Header="_ViewItems"/>
-                <MenuItem Header="_EditItem"/>
-                <MenuItem Header="_DeleteItem"/>
+                <MenuItem Header="_AddItem" />
+                <MenuItem Header="_ViewItems" />
+                <MenuItem Header="_EditItem" />
             </MenuItem>
-            <MenuItem Header="_Authors">
-                <MenuItem Header="_AddAuthor"/>
+            <MenuItem Header="_Authors" Click="MenuItem_Click_1">
+                <MenuItem Header="_AddAuthor" Click="AddAuthor"/>
                 <MenuItem Header="_ViewAuthors"/>
                 <MenuItem Header="_EditAuthor"/>
                 <MenuItem Header="_DeleteAuthor"/>
             </MenuItem>
-            <MenuItem Header="_Publishers">
+            <MenuItem Header="_Publishers" Click="MenuItem_Click_2">
                 <MenuItem Header="_AddPublisher"/>
                 <MenuItem Header="_ViewPublishers"/>
                 <MenuItem Header="_EditPublisher"/>
