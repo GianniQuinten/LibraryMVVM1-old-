@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Data.SqlClient;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -27,7 +28,17 @@ namespace Library
 
         private void Savebtn_Click_Publisher(object sender, RoutedEventArgs e)
         {
+            string Name = txtPublisherName.Text;
 
+            SqlConnection conn = new SqlConnection();
+            conn.ConnectionString = "Data Source=(localdb)\\MSSQLLocalDB; Initial Catalog=Library;";
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = conn;
+
+            conn.Open();
+            cmd.CommandText = "INSERT INTO Publishers (Name) VALUES ('" + Name + "')";
+            cmd.ExecuteNonQuery();
+            conn.Close();
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)

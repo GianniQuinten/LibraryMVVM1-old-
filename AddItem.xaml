@@ -11,7 +11,7 @@
     <Grid>
         <Label Content="Naam" Margin="323,47,427,357" RenderTransformOrigin="1.54,0.7"/>
         <TextBox x:Name="txtItemName" HorizontalAlignment="Left" Margin="382,52,0,0" TextWrapping="Wrap" Text="name" VerticalAlignment="Top" Width="120" RenderTransformOrigin="-0.067,-1.724" TextChanged="TextBox_TextChanged"/>
-        <Button Content="Voeg toe " HorizontalAlignment="Left" Margin="358,89,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.151,0.453" Click="Savebtn_Click"/>
+        <Button Content="Voeg toe " HorizontalAlignment="Left" Margin="358,89,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.151,0.453" Click="Savebtn_Click_Item"/>
         <Label Content="Voeg een Item toe" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Width="204" FontSize="20"/>
 
     </Grid>

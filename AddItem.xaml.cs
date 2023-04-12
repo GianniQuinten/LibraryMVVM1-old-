@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Data.SqlClient;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -30,9 +31,19 @@ namespace Library
 
         }
 
-        private void Savebtn_Click(object sender, RoutedEventArgs e)
+        private void Savebtn_Click_Item(object sender, RoutedEventArgs e)
         {
+            string Name = txtItemName.Text;
 
+            SqlConnection conn = new SqlConnection();
+            conn.ConnectionString = "Data Source=(localdb)\\MSSQLLocalDB; Initial Catalog=Library;";
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = conn;
+
+            conn.Open();
+            cmd.CommandText = "INSERT INTO Items (Name) VALUES ('" + Name + "')";
+            cmd.ExecuteNonQuery();
+            conn.Close();
         }
     }
 }
