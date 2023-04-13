@@ -5,26 +5,43 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Library"
         mc:Ignorable="d"
-        Title="Dashboard" Height="450" Width="800">
-    <Grid>
-        <Menu Margin="0,0,0,408">
-            <MenuItem Header="_Items">
-                <MenuItem Header="_AddItem"/>
-                <MenuItem Header="_ViewItems"/>
-                <MenuItem Header="_EditItem"/>
-                <MenuItem Header="_DeleteItem"/>
+        Title="Dashboard" Height="600" Width="800" WindowState="Maximized">
+    <Window.Background>
+        <ImageBrush ImageSource="C:\Users\giann\projects\Library\Images\bookshelfwallpaper.jpg" Stretch="Uniform"/>
+    </Window.Background>
+    <Grid Margin="0,0,0,-6">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="23*"/>
+            <RowDefinition Height="50*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="58*"/>
+            <ColumnDefinition Width="382*"/>
+            <ColumnDefinition Width="361*"/>
+        </Grid.ColumnDefinitions>
+        <Menu Margin="0,0,0,163" Grid.ColumnSpan="3" Grid.RowSpan="1" Background="#FFBD9595">
+            <MenuItem Header="_Items" Click="MenuItem_Items">
+                <MenuItem Header="_AddItem" />
+                <MenuItem Header="_ViewItems" />
+                <MenuItem Header="_EditItem" />
             </MenuItem>
-            <MenuItem Header="_Authors">
-                <MenuItem Header="_AddAuthor"/>
+            <MenuItem Header="_Authors" Click="MenuItem_Authors">
+                <MenuItem Header="_AddAuthor" Click="AddAuthor"/>
                 <MenuItem Header="_ViewAuthors"/>
                 <MenuItem Header="_EditAuthor"/>
                 <MenuItem Header="_DeleteAuthor"/>
             </MenuItem>
-            <MenuItem Header="_Publishers">
+            <MenuItem Header="_Publishers" Click="MenuItem_Publishers">
                 <MenuItem Header="_AddPublisher"/>
                 <MenuItem Header="_ViewPublishers"/>
                 <MenuItem Header="_EditPublisher"/>
                 <MenuItem Header="_DeletePublisher"/>
+            </MenuItem>
+            <MenuItem Header="_Categories" Click="MenuItem_Categories">
+            </MenuItem>
+            <MenuItem Header="_Genres" Click="MenuItem_Genres">
+            </MenuItem>
+            <MenuItem Header="_Exit" Click="MenuItem_Exit">
             </MenuItem>
         </Menu>
 

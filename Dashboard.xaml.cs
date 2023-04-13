@@ -23,5 +23,40 @@ namespace Library
         {
             InitializeComponent();
         }
+
+        private void MenuItem_Authors(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void AddAuthor(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void MenuItem_Exit(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
+
+        private void MenuItem_Categories(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void MenuItem_Genres(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void MenuItem_Items(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void MenuItem_Publishers(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
