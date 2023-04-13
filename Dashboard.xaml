@@ -25,19 +25,19 @@
                 <MenuItem Header="_ViewItems" />
                 <MenuItem Header="_EditItem" />
             </MenuItem>
-            <MenuItem Header="_Authors" Click="MenuItem_Authors">
+            <MenuItem Header="_Schrijvers" Click="MenuItem_Authors">
                 <MenuItem Header="_AddAuthor" Click="AddAuthor"/>
                 <MenuItem Header="_ViewAuthors"/>
                 <MenuItem Header="_EditAuthor"/>
                 <MenuItem Header="_DeleteAuthor"/>
             </MenuItem>
-            <MenuItem Header="_Publishers" Click="MenuItem_Publishers">
+            <MenuItem Header="_Uitgevers" Click="MenuItem_Publishers">
                 <MenuItem Header="_AddPublisher"/>
                 <MenuItem Header="_ViewPublishers"/>
                 <MenuItem Header="_EditPublisher"/>
                 <MenuItem Header="_DeletePublisher"/>
             </MenuItem>
-            <MenuItem Header="_Categories" Click="MenuItem_Categories">
+            <MenuItem Header="_Categorieen" Click="MenuItem_Categories">
             </MenuItem>
             <MenuItem Header="_Genres" Click="MenuItem_Genres">
             </MenuItem>
