@@ -10,16 +10,17 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Library
 {
     /// <summary>
-    /// Interaction logic for AllAuthors.xaml
+    /// Interaction logic for ViewAuthor.xaml
     /// </summary>
-    public partial class AllAuthors : Window
+    public partial class ViewAuthor : Page
     {
-        public AllAuthors()
+        public ViewAuthor()
         {
             InitializeComponent();
         }
