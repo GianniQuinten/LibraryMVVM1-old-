@@ -1,5 +1,6 @@
 ﻿using Library.Models;
 using Microsoft.Data.SqlClient;
+using Microsoft.Identity.Client.Platforms.Features.DesktopOs.Kerberos;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,11 +12,19 @@ namespace Library.Repositories
 {
     public class UserRepository : RepositoryBase, IUserRepository
     {
-        public void Add(User userModel)
+        public void Add(NetworkCredential credential)
         {
-            throw new NotImplementedException();
+            using (var connection = GetConnection())
+            using (var command = new SqlCommand())
+            {
+                connection.Open();
+                command.Connection = connection;
+                command.CommandText = "insert into [Users] (email, password) VALUES (@email, @password)";
+                command.Parameters.Add("@email", System.Data.SqlDbType.NVarChar).Value = credential.UserName;
+                command.Parameters.Add("@password", System.Data.SqlDbType.NVarChar).Value = credential.Password;
+                command.ExecuteNonQuery();
+            }
         }
-
         public bool AuthenticateUser(NetworkCredential credential)
         {
             bool validUser;
@@ -31,6 +40,7 @@ namespace Library.Repositories
             }
             return validUser;
         }
+
 
         public void Edit(User userModel)
         {

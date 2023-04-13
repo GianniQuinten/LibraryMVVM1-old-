@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,9 +25,11 @@ namespace Library.Models
 
         public string Postalcode { get; set; } = null!;
 
-        public string Email { get; set; } = null!;
+        [EmailAddress(ErrorMessage = "Invalid email address.")]
+        public string Email { get; set; }
 
-        public string? Password { get; set; }
+        [StringLength(50, MinimumLength = 5, ErrorMessage = "Password must be atleast 5 characters.")]
+        public string Password { get; set; }
 
     }
 
