@@ -24,7 +24,7 @@ namespace Library.Repositories
             {
                 connection.Open();
                 command.Connection = connection;
-                command.CommandText = "select *from [User] where email=@email and [password]=@password";
+                command.CommandText = "select *from [Users] where email=@email and [password]=@password";
                 command.Parameters.Add("@email", System.Data.SqlDbType.NVarChar).Value = credential.UserName;
                 command.Parameters.Add("@password", System.Data.SqlDbType.NVarChar).Value = credential.Password;
                 validUser = command.ExecuteScalar() == null ? false : true;
