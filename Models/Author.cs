@@ -14,5 +14,7 @@ namespace Library.Models
 
         public string Lastname { get; set; }
 
+        public ICollection<ItemAuthor> ItemAuthors { get; set; }
+
     }
 }
