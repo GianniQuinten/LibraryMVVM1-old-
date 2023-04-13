@@ -26,6 +26,9 @@
             <TextBox TextWrapping="Wrap" Text="" TextAlignment="Justify" TextChanged="TextBox_TextChanged" Width="173" HorizontalAlignment="Left"/>
             <Label Content="AuthorName" Width="82" HorizontalAlignment="Left"/>
             <TextBox TextWrapping="Wrap" Text="" TextAlignment="Justify" TextChanged="TextBox_TextChanged" Width="173" HorizontalAlignment="Left"/>
+            <Button Content="Bewerk" Width="76" HorizontalAlignment="Left" Margin="0,5,0,0"/>
+            <Button Content="Verwijder" Width="76" HorizontalAlignment="Left" Margin="0,5,0,0"/>
+            <Button Content="Anuleer" Width="76" HorizontalAlignment="Left" Margin="0,5,0,0"/>
         </StackPanel>
 
     </Grid>
