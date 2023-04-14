@@ -14,7 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace Library
+namespace Library.Views.Author
 {
     /// <summary>
     /// Interaction logic for ViewAuthor.xaml
@@ -52,32 +52,18 @@ namespace Library
 
         }
 
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
 
         }
 
-        private void TextBox_TextChanged_1(object sender, TextChangedEventArgs e)
-        {
-
-        }
 
         private void DataGrid_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
         {
 
         }
 
-        private void DataGrid_CellClick(object sender, SelectionChangedEventArgs e)
-        {
-            //if (datagrid.SelectedRows.Count > 0)
-            //{
-                //MessageBox.Show();
-            //}
-        }
+        
     }
 }

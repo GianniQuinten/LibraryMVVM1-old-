@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Dashboard" Height="600" Width="800" WindowState="Maximized">
     <Window.Background>
-        <ImageBrush ImageSource="C:\Users\giann\projects\Library\Images\bookshelfwallpaper.jpg" Stretch="Uniform"/>
+        <ImageBrush ImageSource="/Images/bookshelfwallpaper.jpg" Stretch="Uniform"/>
     </Window.Background>
     <Grid Margin="0,0,0,-6">
         <Grid.RowDefinitions>
