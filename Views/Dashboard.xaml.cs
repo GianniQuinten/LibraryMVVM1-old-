@@ -49,13 +49,6 @@ namespace Library.Views
             addAuthor.Show();
         }
 
-        private void btnEditAuthor_Click(object sender, RoutedEventArgs e)
-        {
-            var editAuthor = new EditAuthor();
-
-            editAuthor.Show();
-        }
-
         private void btnViewAuthor_Click(object sender, RoutedEventArgs e)
         {
             var viewAuthor = new ViewAuthor();
