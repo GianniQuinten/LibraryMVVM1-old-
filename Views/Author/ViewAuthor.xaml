@@ -10,17 +10,18 @@
         <StackPanel Background="#FFBBBBBB" Margin="0,0,0,372"/>
         <Label Content="Boeken bekijken" HorizontalAlignment="Left" Margin="263,8,0,0" VerticalAlignment="Top" FontSize="36" FontFamily="Bell MT"/>
         <Label Content="Boek zoeken" Margin="196,85,528,314" RenderTransformOrigin="1.197,0.629"/>
-        <TextBox HorizontalAlignment="Left" Margin="283,90,0,0" TextWrapping="Wrap" Text="Zoek" VerticalAlignment="Top" Width="120"/>
-        <Button Content="Zoek" HorizontalAlignment="Left" Margin="432,88,0,0" VerticalAlignment="Top" Click="Button_Click" Width="34"/>
-        <DataGrid x:Name="DataGrid" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,126,0,108" SelectionChanged="DataGrid_SelectionChanged_1"/>
+        <TextBox HorizontalAlignment="Left" Margin="283,90,0,0" TextWrapping="Wrap" Text="Search" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Zoek" HorizontalAlignment="Left" Margin="432,88,0,0" VerticalAlignment="Top" Width="34"/>
+        <DataGrid x:Name="DataGrid" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,126,0,108"/>
         <StackPanel Background="#FF9E9999" Margin="0,352,0,-352">
             <Label Content="FirstName"/>
-            <TextBox TextWrapping="Wrap" Text="" TextAlignment="Justify" TextChanged="TextBox_TextChanged" Width="173" HorizontalAlignment="Left"/>
+            <TextBox x:Name="FirstName_txt" TextWrapping="Wrap" Text="" TextAlignment="Justify" Width="173" HorizontalAlignment="Left"/>
             <Label Content="LastName"/>
-            <TextBox TextWrapping="Wrap" Text="" TextAlignment="Justify" TextChanged="TextBox_TextChanged" Width="173" HorizontalAlignment="Left"/>
-            <Button Content="Bewerk" Width="76" HorizontalAlignment="Left" Margin="0,5,0,0"/>
-            <Button Content="Verwijder" Width="76" HorizontalAlignment="Left" Margin="0,5,0,0"/>
-            <Button Content="Anuleer" Width="76" HorizontalAlignment="Left" Margin="0,5,0,0"/>
+            <TextBox x:Name="LastName_txt" TextWrapping="Wrap" Text="" TextAlignment="Justify" Width="173" HorizontalAlignment="Left"/>
+            <Button Content="Edit" Width="76" HorizontalAlignment="Left" Margin="0,5,0,0"/>
+            <Button x:Name="Deletebtn" Content="Delete" Width="76" HorizontalAlignment="Left" Margin="0,5,0,0" Click="Deletebtn_Click"/>
+            <Button Content="Cancel" Width="76" HorizontalAlignment="Left" Margin="0,5,0,0"/>
+            <TextBox x:Name="Id_txt" TextWrapping="Wrap" Text="" TextAlignment="Justify" Width="173"/>
         </StackPanel>
 
     </Grid>

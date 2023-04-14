@@ -31,18 +31,10 @@ namespace Library
             LoadGrid();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        public void cleardata() 
         {
-
-        }
-
-        private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
-
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
+            FirstName_txt.Clear();
+            LastName_txt.Clear();
         }
 
         private void LoadGrid()
@@ -62,9 +54,33 @@ namespace Library
             DataGrid.ItemsSource = dt.DefaultView;
         }
 
-        private void DataGrid_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
+        private void Deletebtn_Click(object sender, RoutedEventArgs e)
         {
+            SqlConnection conn = new SqlConnection();
+            conn.ConnectionString = "Data Source=(localdb)\\MSSQLLocalDB; Initial Catalog=Library;";
+            SqlCommand cmd = new SqlCommand();
+            DataTable dt = new DataTable();
+            cmd.Connection = conn;
+            conn.Open();
 
+            cmd.CommandText = "Delete FROM AUTHORS WHERE Id = " +Id_txt+ " ";
+            try 
+            {
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Record has been deleted", "deleted", MessageBoxButton.OK, MessageBoxImage.Information);
+                conn.Close();
+                cleardata();
+                LoadGrid();
+                conn.Close();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Not deleted" +ex.Message);
+            }
+            finally 
+            {
+                conn.Close(); 
+            }
         }
     }
 }
