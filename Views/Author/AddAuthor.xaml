@@ -7,9 +7,9 @@
         mc:Ignorable="d"
         Title="AddAuthor" Height="450" Width="800">
     <Grid>
-        <Label Content="Naam" Margin="323,47,427,357" RenderTransformOrigin="1.54,0.7"/>
+        <Label Content="Firstname:" Margin="298,47,427,357" RenderTransformOrigin="1.54,0.7"/>
 
-        <Label Content="Achternaam" Margin="292,78,423,324" RenderTransformOrigin="0.236,0.313">
+        <Label Content="Lastname:" Margin="292,78,423,324" RenderTransformOrigin="0.236,0.313">
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -21,9 +21,9 @@
         </Label>
         <TextBox x:Name="txtAuthorName" HorizontalAlignment="Left" Margin="382,52,0,0" TextWrapping="Wrap" Text="name" VerticalAlignment="Top" Width="120" RenderTransformOrigin="-0.067,-1.724" TextChanged="TextBox_TextChanged_1"/>
         <TextBox x:Name="txtAuthorLastname" HorizontalAlignment="Left" Margin="382,85,0,0" TextWrapping="Wrap" Text="lastname" VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChanged"/>
-        <Button Content="Voeg toe
+        <Button Content="Add
 " HorizontalAlignment="Left" Margin="358,122,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.151,0.453" Click="Savebtn_Click"/>
-        <Label Content="Voeg een auteur toe" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Width="204" FontSize="20"/>
+        <Label Content="Add an Author" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Width="204" FontSize="20"/>
 
 
     </Grid>
