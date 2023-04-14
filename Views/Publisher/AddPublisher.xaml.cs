@@ -19,7 +19,7 @@ namespace Library
     /// <summary>
     /// Interaction logic for AddPublisher.xaml
     /// </summary>
-    public partial class AddPublisher : Page
+    public partial class AddPublisher : Window
     {
         public AddPublisher()
         {

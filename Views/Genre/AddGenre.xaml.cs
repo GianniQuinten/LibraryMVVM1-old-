@@ -19,7 +19,7 @@ namespace Library
     /// <summary>
     /// Interaction logic for AddGenre.xaml
     /// </summary>
-    public partial class AddGenre : Page
+    public partial class AddGenre : Window
     {
         public AddGenre()
         {

@@ -10,7 +10,7 @@ namespace Library.Models
     public interface IUserRepository
     {
         bool AuthenticateUser(NetworkCredential credential);
-        void Add(User userModel);
+        void Add(NetworkCredential credential);
         void Edit(User userModel);
         void Remove(int id);
         User GetById(int id);

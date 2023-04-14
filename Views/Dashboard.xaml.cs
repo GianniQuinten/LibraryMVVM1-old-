@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Library.Views.Author;
+using Microsoft.SqlServer.Server;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,7 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace Library
+namespace Library.Views
 {
     /// <summary>
     /// Interaction logic for Dashboard.xaml
@@ -24,39 +26,69 @@ namespace Library
             InitializeComponent();
         }
 
-        private void MenuItem_Authors(object sender, RoutedEventArgs e)
+        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            
+            if (e.LeftButton == MouseButtonState.Pressed)
+                DragMove();
         }
 
-        private void AddAuthor(object sender, RoutedEventArgs e)
+        private void btnMinimize_Click(object sender, RoutedEventArgs e)
         {
-
+            WindowState = WindowState.Minimized;
         }
 
-        private void MenuItem_Exit(object sender, RoutedEventArgs e)
+        private void btnClose_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
         }
 
-        private void MenuItem_Categories(object sender, RoutedEventArgs e)
+        private void btnAddAuthor_Click(object sender, RoutedEventArgs e)
         {
+            var addAuthor = new AddAuthor();
 
+            addAuthor.Show();
         }
 
-        private void MenuItem_Genres(object sender, RoutedEventArgs e)
+        private void btnEditAuthor_Click(object sender, RoutedEventArgs e)
         {
+            var editAuthor = new EditAuthor();
 
+            editAuthor.Show();
         }
 
-        private void MenuItem_Items(object sender, RoutedEventArgs e)
+        private void btnViewAuthor_Click(object sender, RoutedEventArgs e)
         {
+            var viewAuthor = new ViewAuthor();
 
+            viewAuthor.Show();
         }
 
-        private void MenuItem_Publishers(object sender, RoutedEventArgs e)
+        private void btnAddCategory_Click(object sender, RoutedEventArgs e)
         {
+            var addCategory = new AddCategory();
 
+            addCategory.Show();
+        }
+
+        private void btnAddGenre_Click(object sender, RoutedEventArgs e)
+        {
+            var addGenre = new AddGenre();
+
+            addGenre.Show();
+        }
+
+        private void btnAddItem_Click(object sender, RoutedEventArgs e)
+        {
+            var addItem = new AddItem();
+
+            addItem.Show();
+        }
+
+        private void btnAddPublisher_Click(object sender, RoutedEventArgs e)
+        {
+            var addPublisher = new AddPublisher();
+
+            addPublisher.Show();
         }
     }
 }

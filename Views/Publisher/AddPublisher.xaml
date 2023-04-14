@@ -1,4 +1,4 @@
-﻿<Page x:Class="Library.AddPublisher"
+﻿<Window x:Class="Library.AddPublisher"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -15,4 +15,4 @@
         <Label Content="Voeg een Uitgever toe" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Width="229" FontSize="20"/>
 
     </Grid>
-</Page>
+</Window>

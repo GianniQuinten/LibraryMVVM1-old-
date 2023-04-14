@@ -10,6 +10,8 @@ using System.Windows.Input;
 using Library.Repositories;
 using System.Threading;
 using System.Security.Principal;
+using Microsoft.Data.SqlClient;
+using System.Text.RegularExpressions;
 
 namespace Library.ViewModels
 {
@@ -22,6 +24,8 @@ namespace Library.ViewModels
         private bool _isViewVisible=true;
 
         private IUserRepository userRepository;
+
+        [EmailAddress(ErrorMessage = "Invalid email address.")]
         public string Email { 
             get => _email;
             set
@@ -30,6 +34,8 @@ namespace Library.ViewModels
                 OnPropertyChanged(nameof(Email));
             }
         }
+
+        [StringLength(50, MinimumLength = 5, ErrorMessage = "Password must be atleast 5 characters.")]
         public SecureString Password { 
             get => _password;
             set
@@ -57,16 +63,31 @@ namespace Library.ViewModels
 
         // Commands
         public ICommand LoginCommand { get; }
-        public ICommand RecoverPasswordCommand { get; }
-        public ICommand ShowPasswordCommand { get; }
-        public ICommand RememberPasswordCommand { get; }
+        public ICommand RegisterCommand { get; }
 
         // Constructor
         public LoginViewModel()
         {
             userRepository = new UserRepository();
             LoginCommand = new ViewModelCommand(ExecuteLoginCommand, CanExecuteLoginCommand);
-            RecoverPasswordCommand = new ViewModelCommand(p => ExecuteRecoverPassCommand("",""));
+            RegisterCommand = new ViewModelCommand(ExecuteRegisterCommand);
+        }
+
+        private void ExecuteRegisterCommand(object obj)
+        {
+            if (!IsEmailUnique(Email))
+            {
+                ErrorMessage = "This email is already taken!";
+            }
+            else if (!IsValidEmail(Email))
+            {
+                ErrorMessage = "Please choose a valid email address!";
+            }
+            else
+            {
+                userRepository.Add(new System.Net.NetworkCredential(Email, Password));
+                ErrorMessage = "You have succesfully registered!";
+            }
         }
 
         private bool CanExecuteLoginCommand(object obj)
@@ -95,8 +116,37 @@ namespace Library.ViewModels
         }
 
         private void ExecuteRecoverPassCommand(string name, string email)
-        { 
-            throw new NotImplementedException(); 
+        {
+            throw new NotImplementedException();
+        }
+
+        private string _connectionString;
+        protected SqlConnection GetConnection()
+        {
+            _connectionString = "Data Source=(localdb)\\MSSQLLocalDB; Initial Catalog=Library;";
+
+            return new SqlConnection(_connectionString);
+        }
+
+        public static bool IsValidEmail(string email)
+        {
+            Regex emailRegex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$", RegexOptions.IgnoreCase);
+
+            return emailRegex.IsMatch(email);
+        }
+
+        public bool IsEmailUnique(string email)
+        {
+            using (var connection = GetConnection())
+            {
+                using (SqlCommand command = new SqlCommand("SELECT COUNT(*) FROM [Users] WHERE email = @email", connection))
+                {
+                    command.Parameters.AddWithValue("@email", email);
+                    connection.Open();
+                    int count = (int)command.ExecuteScalar();
+                    return count == 0;
+                }
+            }
         }
     }
 }
