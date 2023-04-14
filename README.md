@@ -22,3 +22,26 @@
   <li>Browse publishers by other types of items</li>
   <li>Add new books, other items, authors, and categories to the library</li>
 </ul>
+
+
+///// Important /////
+<p> Incase the User Migration is not doing as it should (it tripped the last day)
+Is here a SQL-Script for the User table</p>
+
+CREATE TABLE [dbo].[Users] (
+    [Id]          INT            IDENTITY (1, 1) NOT NULL,
+    [Name]        NVARCHAR (MAX) NULL,
+    [Middlename]  NVARCHAR (MAX) NULL,
+    [Lastname]    NVARCHAR (MAX) NULL,
+    [Adress]      NVARCHAR (MAX) NULL,
+    [City]        NVARCHAR (MAX) NULL,
+    [Housenumber] INT            NULL,
+    [Postalcode]  NVARCHAR (MAX) NULL,
+    [Email]       NVARCHAR (100) NOT NULL,
+    [Phonenumber] NVARCHAR (MAX) NULL,
+    [Password]    NVARCHAR (MAX) NOT NULL,
+    CONSTRAINT [PK_Users] PRIMARY KEY CLUSTERED ([Id] ASC),
+    UNIQUE NONCLUSTERED ([Email] ASC),
+    UNIQUE NONCLUSTERED ([Email] ASC)
+);
+
