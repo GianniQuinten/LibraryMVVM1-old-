@@ -18,7 +18,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
-namespace Library
+namespace Library.Views.Author
 {
     /// <summary>
     /// Interaction logic for ViewAuthor.xaml
