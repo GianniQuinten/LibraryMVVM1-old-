@@ -22,8 +22,8 @@ namespace Library
             {
                 if (loginView.IsVisible == false && loginView.IsLoaded)
                 {
-                    var mainView = new MainWindow();
-                    mainView.Show();
+                    var dashboard = new Dashboard();
+                    dashboard.Show();
                     loginView.Close();
                 }
             };
