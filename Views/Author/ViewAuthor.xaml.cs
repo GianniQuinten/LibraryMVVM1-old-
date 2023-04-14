@@ -53,7 +53,20 @@ namespace Library
             conn.Close();
             DataGrid.ItemsSource = dt.DefaultView;
         }
+        // because of time contraint not finished
+        private void Updatebtn_Click(object sender, RoutedEventArgs e)
+        {
+            SqlConnection conn = new SqlConnection();
+            conn.ConnectionString = "Data Source=(localdb)\\MSSQLLocalDB; Initial Catalog=Library;";
+            SqlCommand cmd = new SqlCommand();
+            DataTable dt = new DataTable();
+            cmd.Connection = conn;
+            conn.Open();
 
+            cmd.CommandText = "UPDATE FROM AUTHORS WHERE Id = " + Id_txt + " ";
+        }
+
+        //there is a error that i was not able to fix
         private void Deletebtn_Click(object sender, RoutedEventArgs e)
         {
             SqlConnection conn = new SqlConnection();
@@ -63,7 +76,7 @@ namespace Library
             cmd.Connection = conn;
             conn.Open();
 
-            cmd.CommandText = "Delete FROM AUTHORS WHERE Id = " +Id_txt+ " ";
+            cmd.CommandText = "Delete FROM AUTHORS WHERE Id = "+Id_txt+" ";
             try 
             {
                 cmd.ExecuteNonQuery();
