@@ -14,7 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace Library.Views.Author
+namespace Library
 {
     /// <summary>
     /// Interaction logic for ViewAuthor.xaml
@@ -28,7 +28,6 @@ namespace Library.Views.Author
 
         private void ViewAuthor_Load(object sender, EventArgs e)
         {
-            EditPanel.Visibility = Visibility.Collapsed;
             SqlConnection conn = new SqlConnection();
             conn.ConnectionString = "Data Source=(localdb)\\MSSQLLocalDB; Initial Catalog=Library;";
             SqlCommand cmd = new SqlCommand();
@@ -39,7 +38,7 @@ namespace Library.Views.Author
             DataSet ds = new DataSet();
             da.Fill(ds);
 
-            DataGrid.DataContext = ds.Tables[0];
+          //dataGrid.DataContext = ds.Tables[0];
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

@@ -134,7 +134,7 @@
                         </Button.Template>
                     </Button>
                 </Grid>
-                
+
                 <StackPanel
                     Width="250"
                     Grid.Row="2"
@@ -356,7 +356,7 @@
                             </ControlTemplate>
                         </Button.Template>
                     </Button>
-                    
+
                 </StackPanel>
             </Grid>
 
