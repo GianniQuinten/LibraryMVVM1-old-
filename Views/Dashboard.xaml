@@ -134,7 +134,233 @@
                         </Button.Template>
                     </Button>
                 </Grid>
+                
+                <StackPanel
+                    Width="250"
+                    Grid.Row="2"
+                    Orientation="Vertical"
+                    Margin="0,35,0,0">
+
+                    <Button 
+                        x:Name="btnAddAuthor"
+                        Click="btnAddAuthor_Click"           
+                        BorderThickness="0"
+                        Content="Add Author"  
+                        Foreground="White"
+                        FontSize="12"               
+                        FontFamily="Montserat"          
+                        Cursor="Hand" 
+                        Margin="0,10,0,0">
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Background" Value="#462AD8"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#28AEED"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border 
+                                    Width="150" 
+                                    Height="40" 
+                                    CornerRadius="20"
+                                    Background="{TemplateBinding Background}">
+                                    <ContentPresenter 
+                                        VerticalAlignment="Center"
+                                        HorizontalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+
+                    <Button 
+                        x:Name="btnViewAuthor"
+                        Click="btnViewAuthor_Click"           
+                        BorderThickness="0"
+                        Content="View Author"  
+                        Foreground="White"
+                        FontSize="12"               
+                        FontFamily="Montserat"          
+                        Cursor="Hand" 
+                        Margin="0,10,0,0">
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Background" Value="#462AD8"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#28AEED"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border 
+                                    Width="150" 
+                                    Height="40" 
+                                    CornerRadius="20"
+                                    Background="{TemplateBinding Background}">
+                                    <ContentPresenter 
+                                        VerticalAlignment="Center"
+                                        HorizontalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+
+                    <Button 
+                        x:Name="btnAddCategory"
+                        Click="btnAddCategory_Click"           
+                        BorderThickness="0"
+                        Content="Add Category"  
+                        Foreground="White"
+                        FontSize="12"               
+                        FontFamily="Montserat"          
+                        Cursor="Hand" 
+                        Margin="0,35,0,0">
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Background" Value="#462AD8"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#28AEED"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border 
+                                    Width="150" 
+                                    Height="40" 
+                                    CornerRadius="20"
+                                    Background="{TemplateBinding Background}">
+                                    <ContentPresenter 
+                                        VerticalAlignment="Center"
+                                        HorizontalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+
+                    <Button 
+                        x:Name="btnAddGenre"
+                        Click="btnAddGenre_Click"           
+                        BorderThickness="0"
+                        Content="Add Genre"  
+                        Foreground="White"
+                        FontSize="12"               
+                        FontFamily="Montserat"          
+                        Cursor="Hand" 
+                        Margin="0,35,0,0">
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Background" Value="#462AD8"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#28AEED"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border 
+                                    Width="150" 
+                                    Height="40" 
+                                    CornerRadius="20"
+                                    Background="{TemplateBinding Background}">
+                                    <ContentPresenter 
+                                        VerticalAlignment="Center"
+                                        HorizontalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+
+                    <Button 
+                        x:Name="btnAddItem"
+                        Click="btnAddItem_Click"           
+                        BorderThickness="0"
+                        Content="Add Item"  
+                        Foreground="White"
+                        FontSize="12"               
+                        FontFamily="Montserat"          
+                        Cursor="Hand" 
+                        Margin="0,35,0,0">
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Background" Value="#462AD8"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#28AEED"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border 
+                                    Width="150" 
+                                    Height="40" 
+                                    CornerRadius="20"
+                                    Background="{TemplateBinding Background}">
+                                    <ContentPresenter 
+                                        VerticalAlignment="Center"
+                                        HorizontalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+
+                    <Button 
+                        x:Name="btnAddPublisher"
+                        Click="btnAddPublisher_Click"           
+                        BorderThickness="0"
+                        Content="Add Publisher"  
+                        Foreground="White"
+                        FontSize="12"               
+                        FontFamily="Montserat"          
+                        Cursor="Hand" 
+                        Margin="0,35,0,0">
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Background" Value="#462AD8"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#28AEED"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border 
+                                    Width="150" 
+                                    Height="40" 
+                                    CornerRadius="20"
+                                    Background="{TemplateBinding Background}">
+                                    <ContentPresenter 
+                                        VerticalAlignment="Center"
+                                        HorizontalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                    
+                </StackPanel>
             </Grid>
+
         </Border>
     </Border>
+
 </Window>

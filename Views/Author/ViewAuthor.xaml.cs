@@ -18,7 +18,7 @@ namespace Library
     /// <summary>
     /// Interaction logic for ViewAuthor.xaml
     /// </summary>
-    public partial class ViewAuthor : Page
+    public partial class ViewAuthor : Window
     {
         public ViewAuthor()
         {

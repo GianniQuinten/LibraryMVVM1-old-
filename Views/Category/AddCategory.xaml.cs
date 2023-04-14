@@ -19,7 +19,7 @@ namespace Library
     /// <summary>
     /// Interaction logic for AddCategory.xaml
     /// </summary>
-    public partial class AddCategory : Page
+    public partial class AddCategory : Window
     {
         public AddCategory()
         {

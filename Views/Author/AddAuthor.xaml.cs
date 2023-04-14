@@ -20,7 +20,7 @@ namespace Library.Views.Author
     /// <summary>
     /// Interaction logic for AddAuthor.xaml
     /// </summary>
-    public partial class AddAuthor : Page
+    public partial class AddAuthor : Window
     {
         public AddAuthor()
         {
